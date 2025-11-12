@@ -15,12 +15,6 @@ const contributions = [
     description: "Brief description of your contribution and its impact.",
     link: "https://github.com/project/repo/pull/456",
   },
-  {
-    title: "Contribution Title 3",
-    project: "Project Name",
-    description: "Brief description of your contribution and its impact.",
-    link: "https://github.com/project/repo/pull/789",
-  },
 ];
 
 const OpenSource = () => {
@@ -28,7 +22,7 @@ const OpenSource = () => {
     <section id="opensource" className="py-24 px-6 bg-secondary/30">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-          Open Source <span className="text-primary">Contributions</span>
+          My open source Contributions - <span className="text-primary">Active Microsoft Contributor</span>
         </h2>
 
         <div className="space-y-6">

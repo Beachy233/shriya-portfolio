@@ -27,6 +27,22 @@ const projects = [
     readme: "https://github.com/yourusername/project3#readme",
     demo: "https://youtube.com/watch?v=demo3",
   },
+  {
+    title: "Project Name 4",
+    description: "Brief description of your project. Explain what it does and what technologies were used.",
+    tags: ["Vue.js", "Express", "MySQL"],
+    github: "https://github.com/yourusername/project4",
+    readme: "https://github.com/yourusername/project4#readme",
+    demo: "https://youtube.com/watch?v=demo4",
+  },
+  {
+    title: "Project Name 5",
+    description: "Brief description of your project. Explain what it does and what technologies were used.",
+    tags: ["Angular", "NestJS", "Redis"],
+    github: "https://github.com/yourusername/project5",
+    readme: "https://github.com/yourusername/project5#readme",
+    demo: "https://youtube.com/watch?v=demo5",
+  },
 ];
 
 const Projects = () => {
