@@ -25,16 +25,16 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Asymmetrical shapes for photos
+  // Simple rectangular photos with varying dimensions
   const photoShapes = [
-    { style: "clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);", width: "w-72", height: "h-80" },
-    { style: "clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);", width: "w-64", height: "h-72" },
-    { style: "clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);", width: "w-80", height: "h-96" },
-    { style: "clip-path: circle(50% at 50% 50%);", width: "w-64", height: "h-64" },
-    { style: "clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);", width: "w-72", height: "h-72" },
-    { style: "clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);", width: "w-64", height: "h-80" },
-    { style: "clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);", width: "w-80", height: "h-72" },
-    { style: "clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);", width: "w-72", height: "h-96" },
+    { width: "w-64", height: "h-72" },
+    { width: "w-80", height: "h-80" },
+    { width: "w-72", height: "h-64" },
+    { width: "w-96", height: "h-72" },
+    { width: "w-64", height: "h-80" },
+    { width: "w-72", height: "h-72" },
+    { width: "w-80", height: "h-64" },
+    { width: "w-72", height: "h-80" },
   ];
 
   return (
@@ -43,18 +43,17 @@ const Hero = () => {
       <div className="absolute top-0 left-0 right-0 h-1/2 overflow-hidden">
         <div
           ref={scrollRef}
-          className="flex gap-6 h-full overflow-x-hidden py-8"
+          className="flex gap-1 h-full overflow-x-hidden py-8"
           style={{ scrollBehavior: "auto" }}
         >
           {/* Duplicate photos for infinite scroll effect */}
           {[...Array(2)].map((_, setIndex) => (
-            <div key={setIndex} className="flex gap-6 h-full items-center">
+            <div key={setIndex} className="flex gap-1 h-full items-center">
               {/* TODO: Replace these with your actual photos */}
               {photoShapes.map((shape, num) => (
                 <div
                   key={`${setIndex}-${num + 1}`}
-                  className={`${shape.width} ${shape.height} flex-shrink-0 bg-gradient-to-br from-primary/20 to-secondary flex items-center justify-center text-foreground border-2 border-primary/30`}
-                  style={{ clipPath: shape.style.split(": ")[1].replace(";", "") }}
+                  className={`${shape.width} ${shape.height} flex-shrink-0 bg-gradient-to-br from-primary/30 to-secondary/40 flex items-center justify-center text-foreground/80 border border-primary/20`}
                 >
                   Photo {num + 1}
                 </div>
